@@ -5,8 +5,8 @@ import tsconfigPaths from "vite-tsconfig-paths";
 
 // https://vite.dev/config/
 export default defineConfig({
-  // IMPORTANT: Replace 'dut-cardiff-site' with your actual repository name
-  base: '/dut-cardiff-site/',
+  // Use relative path to ensure it works regardless of repo name
+  base: './',
   build: {
     sourcemap: 'hidden',
   },
