@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Calendar, Award, Users, Globe } from "lucide-react";
-import { subCenters, activities } from "../data/mockData";
+import { subCenters, activities, categories } from "../data/mockData";
 import { motion } from "framer-motion";
 
 const Home = () => {
@@ -51,40 +51,50 @@ const Home = () => {
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-              {activities.slice(0, 2).map((activity) => (
-                <div
-                  key={activity.id}
-                  className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-                >
-                  <div className="md:w-2/5 h-48 md:h-auto">
-                    <img
-                      src={activity.image}
-                      alt={activity.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="p-6 md:w-3/5 flex flex-col justify-between">
-                    <div>
-                      <div className="flex items-center text-sm text-gray-500 mb-2">
-                        <Calendar className="h-4 w-4 mr-1" />
-                        {activity.date}
-                      </div>
-                      <h3 className="text-lg font-bold text-gray-900 mb-2">
-                        {activity.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm line-clamp-2">
-                        {activity.summary}
-                      </p>
+              {activities.slice(0, 2).map((activity) => {
+                const category = categories.find(c => c.id === activity.category);
+                return (
+                  <div
+                    key={activity.id}
+                    className="flex flex-col md:flex-row bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow border border-gray-100 relative"
+                  >
+                    <div className="md:w-2/5 h-48 md:h-auto">
+                      <img
+                        src={activity.image}
+                        alt={activity.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <Link
-                      to={`/activities/${activity.id}`}
-                      className="mt-4 text-primary hover:text-secondary text-sm font-medium"
-                    >
-                      Read More
-                    </Link>
+                    <div className="p-6 md:w-3/5 flex flex-col justify-between">
+                      <div>
+                        <div className="flex items-center justify-between mb-2">
+                          <div className="flex items-center text-sm text-gray-500">
+                            <Calendar className="h-4 w-4 mr-1" />
+                            {activity.date}
+                          </div>
+                          {category && category.id !== "all" && (
+                            <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800 whitespace-nowrap overflow-hidden text-ellipsis max-w-[50%]">
+                              {category.name}
+                            </span>
+                          )}
+                        </div>
+                        <h3 className="text-lg font-bold text-gray-900 mb-2 line-clamp-2">
+                          {activity.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm line-clamp-2">
+                          {activity.summary}
+                        </p>
+                      </div>
+                      <Link
+                        to={`/activities/${activity.id}`}
+                        className="mt-4 text-primary hover:text-secondary text-sm font-medium"
+                      >
+                        Read More
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
             
             <div className="mt-8 text-center md:hidden">
@@ -144,24 +154,24 @@ const Home = () => {
       </section>
 
       {/* Achievements Stats */}
-      <section className="py-16 bg-primary text-white">
+      <section className="py-8 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="p-6">
+            <div className="p-4">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4">
                 <Users className="h-8 w-8 text-accent" />
               </div>
               <div className="text-4xl font-bold mb-2">17</div>
               <div className="text-gray-300">Core Researchers</div>
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4">
                 <Award className="h-8 w-8 text-accent" />
               </div>
               <div className="text-4xl font-bold mb-2">10+</div>
               <div className="text-gray-300">High-level Papers</div>
             </div>
-            <div className="p-6">
+            <div className="p-4">
               <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-white/10 mb-4">
                 <Globe className="h-8 w-8 text-accent" />
               </div>

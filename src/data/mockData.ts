@@ -1,3 +1,15 @@
+import Image11 from "../assets/Activities/1/1.jpg";
+import Image12 from "../assets/Activities/1/2.jpg";
+import Image13 from "../assets/Activities/1/3.jpg";
+import Image21 from "../assets/Activities/2/1.jpg";
+import Image31 from "../assets/Activities/3/1.jpg";
+import Image41 from "../assets/Activities/4/1.jpg";
+import Image42 from "../assets/Activities/4/2.jpg";
+import Image43 from "../assets/Activities/4/3.jpg";
+import Image44 from "../assets/Activities/4/4.jpg";
+import Image51 from "../assets/Activities/5/1.jpg";
+import Image52 from "../assets/Activities/5/2.jpg";
+import Image53 from "../assets/Activities/5/3.jpg";
 
 export const subCenters = [
   {
@@ -207,51 +219,91 @@ export const categories = [
 
 export const activities = [
   {
-    id: 3,
-    title: "The third collaborative activity between two universities",
-    date: "2023-11-15",
-    summary: "The details of the third collaborative activity between two universities.",
-    image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&q=80&w=2070",
+    id: 5,
+    title: "Marco Palombo from Cardiff University Delivers Academic Presentation at Dalian University of Technology",
+    date: "2024-05-20",
+    summary: "Academic Visit",
+    image: Image51,
+    images: [
+      Image51,
+      Image52,
+      Image53,
+    ],
     content: `
-      The details of the third collaborative activity between two universities.
-
-      The details of the third collaborative activity between two universities.
-
-      The details of the third collaborative activity between two universities.
-    `,
-    category: "all",
-  },
-  {
-    id: 2,
-    title: "The second collaborative activity between two universities",
-    date: "2023-09-20",
-    summary: "The details of the second collaborative activity between two universities.",
-    image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&q=80&w=2070",
-    content: `
-      The details of the second collaborative activity between two universities.
-
-      The details of the second collaborative activity between two universities.
-
-      The details of the second collaborative activity between two universities.
-    `,
-    category: "cs-se",
-  },
-  {
-    id: 1,
-    title: "The first collaborative activity between two universities",
-    date: "2023-06-10",
-    summary: "The details of the first collaborative activity between two universities.",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=2070",
-    content: `
-      The details of the first collaborative activity between two universities.
-
-      The details of the first collaborative activity between two universities.
-
-      The details of the first collaborative activity between two universities.
+      The details of the academic visit.
     `,
     category: "medical-imaging-ai",
   },
-];
+  {
+    id: 4,
+    title: "Assistant Professor Songyao Zhang from Faculty of Medicine at Dalian University of Technology Conducts Academic Visit to CUBRIC of Cardiff University",
+    date: "2026-01-25",
+    summary: "Academic Visit",
+    image: Image41,
+    images: [
+      Image41,
+      Image42,
+      Image43,
+      Image44,
+    ],
+    content: `
+      In January 2026, at the invitation of Marco Palombo, Associate Professor at Cardiff University and an expert in microstructure imaging, Songyao Zhang, Assistant Professor in the Faculty of Medicine at Dalian University of Technology, paid an academic visit to Cardiff University and CUBRIC, one of Europe's leading brain research platforms. 
+      During the visit, she toured several world-class research facilities at CUBRIC, including the Siemens 7 Tesla Magnetom 7T ultra-high-field MRI system, the Siemens Prisma 3T advanced research MRI system, and a microstructure MRI system equipped with ultra-strong 300 mT/m gradient coils. 
+      She also visited Marco Palombo's research group and participated in group meetings and academic exchanges. Songyao Zhang delivered a specialized academic presentation entitled “Exploring Brain Structure and Function Based on Macroscopic Cortical Landmarks.” The two sides conducted in-depth academic discussions and technical exchanges on multimodal neuroimaging analysis, particularly focusing on key scientific questions such as how findings at the macroscopic level can be validated at the microscopic level.
+    `,
+    category: "medical-imaging-ai",
+  },
+  {
+    id: 3,
+    title: "Professor Emiliano Spezi from Cardiff University Visits Professor Hongkai Wang's Research Group at Dalian University of Technology for a Short-Term Exchange",
+    date: "2025-11-15",
+    summary: "Academic Visit",
+    image: Image31,
+    images: [
+      Image31,
+    ],
+    content: `
+      Recently, at the  invitation of Professor Hongkai Wang, Professor Emiliano Spezi from Cardiff University successfully completed a short-term academic exchange visit to DUT. This visit aimed to further deepen the collaborative research ties between the two universities at the intersection of medical imaging and artificial intelligence.
+
+      During the exchange, Professor Spezi engaged in extensive and in-depth academic discussions with the research group of Professor Hongkai Wang. The two teams focused on cutting-edge topics in smart healthcare, specifically delving into key scientific challenges such as the "Application of Generative Diffusion Models in Precision Oncology" and the "Prediction of Neoadjuvant Chemotherapy Efficacy in Breast Cancer based on Multi-modal Imaging."
+
+      By leveraging their complementary expertise through technical exchanges and joint analysis, the two teams achieved substantial progress on these specific research bottlenecks. This exchange not only clarified the technical roadmap for their joint research efforts but also laid a solid foundation for future high-level international grant applications and collaborative academic publications.
+    `,
+    category: "medical-imaging-ai",
+  },
+  {
+    id: 2,
+    title: "Professor Hongkai Wang from Faculty of Medicine of Dalian University of Technology Visits the Research Group of Emiliano Spezi at Cardiff University",
+    date: "2025-06-05",
+    summary: "Academic Visit",
+    image: Image21,
+    images: [
+      Image21,
+    ],
+    content: `
+      Professor Hongkai Wang, Deputy Dean and Professor of the Faculty of Medicine at Dalian University of Technology, visited the research group of Professor Emiliano Spezi at Cardiff University in the UK to explore academic collaboration. 
+      During the visit, Professor Wang engaged in a series of intensive academic discussions and knowledge-sharing sessions with Professor Spezi and his research team. The dialogue primarily focused on the cutting-edge field of personalized cancer diagnosis and treatment. The two sides explored innovative approaches to utilizing multi-modal medical imaging to improve precision oncology and patient-specific therapeutic strategies.
+      As a highly productive outcome of these meetings, the two parties successfully formulated a comprehensive plan for future collaboration. This visit marks a significant milestone in building a robust partnership dedicated to advancing technological breakthroughs in smart healthcare.
+    `,
+    category: "medical-imaging-ai",
+  },
+  {
+    id: 1,
+    title: "Professor Emiliano Spezi from Cardiff University Delivers Academic Presentation at Dalian University of Technology",
+    date: "2024-07-23",
+    summary: "Academic Visit",
+    image: Image11,
+    images: [
+      Image11,
+      Image12,
+      Image13,
+    ],
+    content: `
+      The details of the academic visit.
+    `,
+    category: "medical-imaging-ai",
+  },
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 export const achievements = [
   {
@@ -280,4 +332,4 @@ export const achievements = [
     category: "all",
   },
   
-];
+].sort((a, b) => parseInt(b.year) - parseInt(a.year));
