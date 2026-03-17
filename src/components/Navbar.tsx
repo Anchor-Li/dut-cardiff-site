@@ -1,8 +1,10 @@
 
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { cn } from "../lib/utils";
+import dutLogo from "../assets/dut.png";
+import cardiffLogo from "../assets/cardiff.jpg";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +12,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Sub-centers", path: "/sub-centers" },
+    { name: "Sub-groups", path: "/sub-groups" },
     { name: "Activities", path: "/activities" },
     { name: "Achievements", path: "/achievements" },
   ];
@@ -20,8 +22,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <Globe className="h-8 w-8 text-accent" />
+            <Link to="/" className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2">
+                <img src={dutLogo} alt="DUT Logo" className="h-10 w-10" />
+                <div className="h-8 w-px bg-white/30 mx-1"></div>
+                <img src={cardiffLogo} alt="Cardiff University Logo" className="h-10 w-10" />
+              </div>
               <div className="flex flex-col">
                 <span className="text-xs text-gray-300">
                   Dalian University of Technology - Cardiff University

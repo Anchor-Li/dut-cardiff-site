@@ -5,7 +5,9 @@ import { achievements, categories } from "../data/mockData";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Achievements = () => {
-  const [filterType, setFilterType] = useState<"all" | "paper" | "project" | "patent">("all");
+  type FilterType = "all" | "paper" | "project" | "patent";
+
+  const [filterType, setFilterType] = useState<FilterType>("all");
   const [filterCategory, setFilterCategory] = useState<string>("all");
 
   const filteredAchievements = achievements.filter((item) => {
@@ -54,15 +56,17 @@ const Achievements = () => {
         <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
           {/* Type Filter */}
           <div className="flex flex-wrap justify-center gap-4">
-            {[
-              { id: "all", label: "All Types" },
-              { id: "paper", label: "Papers" },
-              { id: "project", label: "Projects" },
-              { id: "patent", label: "Patents" },
-            ].map((item) => (
+            {(
+              [
+                { id: "all", label: "All Types" },
+                { id: "paper", label: "Papers" },
+                { id: "project", label: "Projects" },
+                { id: "patent", label: "Patents" },
+              ] as const satisfies ReadonlyArray<{ id: FilterType; label: string }>
+            ).map((item) => (
               <button
                 key={item.id}
-                onClick={() => setFilterType(item.id as any)}
+                onClick={() => setFilterType(item.id)}
                 className={`px-6 py-2 rounded-full font-medium transition-all transform hover:scale-105 ${
                   filterType === item.id
                     ? "bg-primary text-white shadow-md"

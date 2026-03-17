@@ -10,7 +10,7 @@ const SubCenters = () => {
     <div className="bg-gray-50 min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-primary mb-4">Sub-centers</h1>
+          <h1 className="text-4xl font-bold text-primary mb-4">Sub-groups</h1>
           <p className="text-xl text-gray-600">
             The Centre has several specialized research directions, gathering top scientific research forces from both universities.
           </p>
@@ -42,7 +42,7 @@ const SubCenters = () => {
                 </p>
                 <div>
                   <Link
-                    to={`/sub-centers/${center.id}`}
+                    to={`/sub-groups/${center.id}`}
                     className="inline-flex items-center px-6 py-3 bg-primary text-white rounded-lg hover:bg-primary-light transition-colors font-medium"
                   >
                     View Members & Details <ArrowRight className="ml-2 h-5 w-5" />

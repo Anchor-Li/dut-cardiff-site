@@ -2,7 +2,7 @@
 export const subCenters = [
   {
     id: "civil-engineering",
-    name: "Civil Engineering Sub-center",
+    name: "Civil Engineering Sub-group",
     description: "Focusing on sustainable infrastructure, structural health monitoring, and advanced construction materials.",
     image: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&q=80&w=2070",
     members: [
@@ -26,7 +26,7 @@ export const subCenters = [
   },
   {
     id: "mechanics-aerospace",
-    name: "Mechanics and Aerospace Engineering Sub-center",
+    name: "Mechanics and Aerospace Engineering Sub-group",
     description: "Researching advanced aerodynamics, propulsion systems, and lightweight structures.",
     image: "https://images.unsplash.com/photo-1517976487492-5750f3195933?auto=format&fit=crop&q=80&w=2070",
     members: [
@@ -50,7 +50,7 @@ export const subCenters = [
   },
   {
     id: "medical-imaging-ai",
-    name: "Medical Imaging and Artificial Intelligence Sub-center",
+    name: "Medical Imaging and Artificial Intelligence Sub-group",
     description: "Developing cutting-edge AI algorithms for medical image analysis and precision medicine.",
     image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=2070",
     members: [
@@ -90,7 +90,7 @@ export const subCenters = [
   },
   {
     id: "cs-se",
-    name: "Computer Science and Software Engineering Sub-center",
+    name: "Computer Science and Software Engineering Sub-group",
     description: "Advancing cloud computing, data science, and resilient software systems.",
     image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070",
     members: [
@@ -122,7 +122,7 @@ export const subCenters = [
   },
   {
     id: "chemistry",
-    name: "Chemistry Sub-center",
+    name: "Chemistry Sub-group",
     description: "Exploring new materials, catalysis, and sustainable chemical processes.",
     image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&q=80&w=2070",
     members: [
@@ -146,7 +146,7 @@ export const subCenters = [
   },
   {
     id: "architecture",
-    name: "Architecture Sub-center",
+    name: "Architecture Sub-group",
     description: "Focusing on sustainable urban design, architectural heritage, and smart cities.",
     image: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80&w=2070",
     members: [
@@ -170,7 +170,7 @@ export const subCenters = [
   },
   {
     id: "business",
-    name: "Business Sub-center",
+    name: "Business Sub-group",
     description: "Researching supply chain management, logistics, and innovation strategy.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=2070",
     members: [
